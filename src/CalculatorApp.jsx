@@ -24,3 +24,20 @@ const BUTTONS = [
 ];
 
 // rest of component code...
+function CalculatorApp() {
+  const [input, setInput] = useState("");
+
+  return (
+    <div>
+      <h1>React Calculator</h1>
+      <input value={input} readOnly />
+      <div>
+        {BUTTONS.map((btn) => (
+          <button key={btn.label}>{btn.label}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default CalculatorApp;
